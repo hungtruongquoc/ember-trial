@@ -6,5 +6,5 @@ phases:
       - printenv
       - npm install
   build:
-    comands:
+    commands:
       - npm run build
