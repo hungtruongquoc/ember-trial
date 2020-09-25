@@ -1,3 +1,5 @@
+![Build Status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiQ01JMnhlR0g0aVhDUndIR09CMjlnY1VqRFBJS2kxRjN0eFhwY2tTeE9zckhGcWNPQmNjNFBVYjBsaHYyZ3pFcXNYVXlmaW5HMW82UzRDMWFTcWE1d2ZvPSIsIml2UGFyYW1ldGVyU3BlYyI6ImRCWm45WDFoRndPNXY2NEEiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
+
 # test-app
 
 This README outlines the details of collaborating on this Ember application.
