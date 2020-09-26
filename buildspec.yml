@@ -1,5 +1,10 @@
 version: 0.2
 
+environment_variables:
+  plaintext:
+    S3_BUCKET: "emberjs"
+    CF_DISTRIBUTION: "E20D70OS97EBDR"
+
 phases:
   install:
     commands:
@@ -9,10 +14,8 @@ phases:
     commands:
       - npm run build
 
-artifacts:
-  files:
-    - 'dist/**/*'
-
-post_build:
-  commands:
-    - aws cloudfront create-invalidation --distribution-id E20D70OS97EBDR --paths '/*'
+  post_build:
+    commands:
+      - aws s3 rm s3://${S3_BUCKET} --recursive
+      - aws s3 cp dist/ s3://${S3_BUCKET} --recursive
+      - aws cloudfront create-invalidation --distribution-id CF_DISTRIBUTION --paths '/*'
